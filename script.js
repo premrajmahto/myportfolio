@@ -92,7 +92,7 @@ qsa('.nav-link').forEach(link => {
    4. TYPING ANIMATION
    ============================================================ */
 const typingEl = qs('.typing-text');
-const words    = ['Full Stack Developer', 'UI/UX Designer', 'Freelancer', 'Problem Solver'];
+const words    = ['Full Stack Developer', 'UI/UX Designer', 'Digital Marketer', 'Problem Solver'];
 let wIdx = 0, cIdx = 0, deleting = false;
 
 function typeLoop() {
@@ -221,12 +221,26 @@ if (contactForm) {
 
         if (!valid) return;
 
-        // Simulate send
+        // Send email via Formsubmit.co
         const submitBtn = qs('#submit-btn');
         submitBtn.textContent = 'Sending…';
         submitBtn.disabled = true;
 
-        setTimeout(() => {
+        fetch("https://formsubmit.co/ajax/ceoofmylife1210@gmail.com", {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: qs('#name').value,
+                email: qs('#email').value,
+                subject: qs('#subject').value,
+                message: qs('#message').value
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
             contactForm.reset();
             Object.values(fields).forEach(({ el, err }) => {
                 if (el) { el.classList.remove('error-field'); err.textContent = ''; }
@@ -237,7 +251,12 @@ if (contactForm) {
             submitBtn.disabled = false;
 
             setTimeout(() => { successMsg.style.display = 'none'; }, 6000);
-        }, 1200);
+        })
+        .catch(error => {
+            console.log(error);
+            submitBtn.innerHTML = 'Error - Try Again';
+            submitBtn.disabled = false;
+        });
     });
 }
 
