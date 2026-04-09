@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prem Raj – Full Stack Developer & UI/UX Designer. Building elegant, high-performance web experiences.">
+    <title>Prem Raj | Full Stack Developer</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+<!-- ========== NAVBAR ========== -->
+<header class="header" id="header">
+    <nav class="navbar container">
+        <a href="#home" class="logo"><span class="logo-accent">P</span>rem.</a>
+        <ul class="nav-list" id="nav-menu">
+            <li><a href="#home"     class="nav-link active">Home</a></li>
+            <li><a href="#about"    class="nav-link">About</a></li>
+            <li><a href="#skills"   class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact"  class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-button" aria-label="Toggle theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="hamburger" id="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="home">
+    <!-- Animated blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="container hero-container">
+        <div class="hero-text" data-aos="fade-right" data-aos-duration="900">
+            <div class="hero-badge"><i class="fa-solid fa-circle-dot pulse-dot"></i> Available for work</div>
+            <h1 class="hero-title">Hi, I'm <span class="gradient-text">Prem Raj</span></h1>
+            <h2 class="hero-subtitle">I'm a <span class="typing-text"></span><span class="cursor-blink">|</span></h2>
+            <p class="hero-desc">
+                I design and build beautiful, performant digital experiences. Passionate about clean code, great design, and solving real problems with technology.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#contact"  class="btn btn-ghost">Let's Talk</a>
+            </div>
+            <div class="hero-socials">
+                <a href="#" target="_blank" class="social-pill"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="#" target="_blank" class="social-pill"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                <a href="#" target="_blank" class="social-pill"><i class="fa-brands fa-twitter"></i> Twitter</a>
+            </div>
+        </div>
+
+        <div class="hero-image-wrap" data-aos="fade-left" data-aos-duration="900" data-aos-delay="100">
+            <div class="hero-img-ring">
+                <div class="hero-img-inner">
+                    <img src="images/profilephoto.jpg" alt="Prem Raj" class="hero-img">
+                </div>
+            </div>
+            <div class="floating-card card-exp" data-aos="zoom-in" data-aos-delay="500">
+                <i class="fa-solid fa-briefcase"></i>
+                <div><strong>5+ Years</strong><span>Experience</span></div>
+            </div>
+            <div class="floating-card card-projects" data-aos="zoom-in" data-aos-delay="600">
+                <i class="fa-solid fa-folder-open"></i>
+                <div><strong>50+</strong><span>Projects</span></div>
+            </div>
+        </div>
+    </div>
+    <a href="#about" class="scroll-indicator"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="about section" id="about">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">Who I Am</span>
+            <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+                <p>I'm a <strong>Full Stack Web Developer</strong> and <strong>UI/UX enthusiast</strong> based in Ranchi, Jharkhand. I build scalable, accessible web applications — from pixel-perfect frontends to robust backends.</p>
+                <p>With a strong foundation in both design and development, I bring a holistic approach to every project. I care deeply about user experience, performance, and writing maintainable code.</p>
+                <a href="#" class="btn btn-primary" id="cv-btn">Download Resume <i class="fa-solid fa-download"></i></a>
+            </div>
+
+            <div class="about-stats" data-aos="fade-left" data-aos-delay="100">
+                <div class="stat-card">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years of Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Technologies Mastered</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SKILLS ========== -->
+<section class="skills section" id="skills">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">What I Know</span>
+            <h2 class="section-title">My Expertise</h2>
+        </div>
+
+        <div class="skills-layout">
+            <div class="skills-bars" data-aos="fade-right" data-aos-delay="100">
+                <h3 class="skills-col-title">Technical Skills</h3>
+
+                <div class="skill-item">
+                    <div class="skill-meta"><span>HTML &amp; CSS</span><span>95%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-meta"><span>JavaScript</span><span>80%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-meta"><span>React.js</span><span>70%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-meta"><span>Node.js / Express</span><span>65%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-meta"><span>MySQL / MongoDB</span><span>72%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-meta"><span>UI/UX Design (Figma)</span><span>78%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+                </div>
+            </div>
+
+            <div class="skills-tools" data-aos="fade-left" data-aos-delay="100">
+                <h3 class="skills-col-title">Tools & Technologies</h3>
+                <div class="tool-grid">
+                    <div class="tool-chip"><i class="fa-brands fa-html5"></i> HTML5</div>
+                    <div class="tool-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+                    <div class="tool-chip"><i class="fa-brands fa-js"></i> JavaScript</div>
+                    <div class="tool-chip"><i class="fa-brands fa-react"></i> React</div>
+                    <div class="tool-chip"><i class="fa-brands fa-node-js"></i> Node.js</div>
+                    <div class="tool-chip"><i class="fa-brands fa-python"></i> Python</div>
+                    <div class="tool-chip"><i class="fa-brands fa-git-alt"></i> Git</div>
+                    <div class="tool-chip"><i class="fa-brands fa-docker"></i> Docker</div>
+                    <div class="tool-chip"><i class="fa-solid fa-database"></i> MySQL</div>
+                    <div class="tool-chip"><i class="fa-brands fa-figma"></i> Figma</div>
+                    <div class="tool-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
+                    <div class="tool-chip"><i class="fa-brands fa-aws"></i> AWS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PROJECTS ========== -->
+<section class="projects section" id="projects">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">My Work</span>
+            <h2 class="section-title">Featured Projects</h2>
+        </div>
+
+        <div class="filter-bar" data-aos="fade-up" data-aos-delay="50">
+            <button class="filter-btn active-filter" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web App</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+
+            <article class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="0">
+                <div class="project-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=600" alt="E-commerce Platform" class="project-img">
+                    <div class="project-badge">Web App</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">ShopEase – E-Commerce</h3>
+                    <p class="project-desc">A full-stack e-commerce platform with cart, auth, and Stripe payments. Features an admin dashboard for inventory management.</p>
+                    <div class="project-tags"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span></div>
+                    <div class="project-links">
+                        <a href="#" class="project-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                        <a href="#" class="project-btn project-btn-ghost"><i class="fa-brands fa-github"></i> Source</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="design" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=600" alt="Brand Design" class="project-img">
+                    <div class="project-badge">Design</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">NovaBrand – Identity Design</h3>
+                    <p class="project-desc">A complete brand identity system for a tech startup — logo, color palette, typography, marketing assets, and design guidelines.</p>
+                    <div class="project-tags"><span>Figma</span><span>Illustrator</span><span>Branding</span></div>
+                    <div class="project-links">
+                        <a href="#" class="project-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Case</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600" alt="Dev Dashboard" class="project-img">
+                    <div class="project-badge">Web App</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">DevBoard – Analytics Dashboard</h3>
+                    <p class="project-desc">A real-time analytics dashboard for developers with GitHub integration, commit tracking, and project health metrics.</p>
+                    <div class="project-tags"><span>React</span><span>D3.js</span><span>GitHub API</span></div>
+                    <div class="project-links">
+                        <a href="#" class="project-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                        <a href="#" class="project-btn project-btn-ghost"><i class="fa-brands fa-github"></i> Source</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="mobile" data-aos="fade-up" data-aos-delay="50">
+                <div class="project-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=600" alt="Mobile App" class="project-img">
+                    <div class="project-badge">Mobile</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">FitTrack – Fitness App UI</h3>
+                    <p class="project-desc">A mobile-first fitness tracking application UI with workout plans, progress rings, and a clean onboarding flow designed in Figma.</p>
+                    <div class="project-tags"><span>Figma</span><span>React Native</span><span>UI/UX</span></div>
+                    <div class="project-links">
+                        <a href="#" class="project-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Prototype</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="contact section" id="contact">
+    <div class="blob blob-3"></div>
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">Get In Touch</span>
+            <h2 class="section-title">Let's Work Together</h2>
+        </div>
+
+        <div class="contact-layout">
+            <div class="contact-left" data-aos="fade-right" data-aos-delay="100">
+                <p class="contact-intro">Have a project in mind or want to collaborate? I'd love to hear from you. Fill out the form and I'll get back to you within 24 hours.</p>
+
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-regular fa-envelope"></i></div>
+                        <div>
+                            <span class="ci-label">Email</span>
+                            <a href="mailto:ceoofmylife1210@gmail.com" class="ci-value">ceoofmylife1210@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <span class="ci-label">WhatsApp</span>
+                            <a href="https://wa.me/918239988743" class="ci-value">+91 8239988743</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <span class="ci-label">Location</span>
+                            <span class="ci-value">Ranchi, Jharkhand</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="contact-form" class="contact-form" novalidate data-aos="fade-left" data-aos-delay="100">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Rahul Sharma" class="form-input">
+                        <span class="error-msg" id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" class="form-input">
+                        <span class="error-msg" id="email-error"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Project Inquiry" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." class="form-input"></textarea>
+                    <span class="error-msg" id="message-error"></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                    Send Message <i class="fa-regular fa-paper-plane"></i>
+                </button>
+                <p class="success-msg" id="success-msg">
+                    <i class="fa-solid fa-circle-check"></i> Message sent! I'll be in touch soon.
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <a href="#home" class="logo"><span class="logo-accent">P</span>rem.</a>
+            <p>Building digital experiences that matter.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-social-col">
+            <h4>Follow Me</h4>
+            <div class="footer-socials">
+                <a href="#" class="f-social" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="f-social" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="f-social" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="f-social" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="f-social" title="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 <strong>Prem Raj</strong>. All rights reserved. Crafted with <i class="fa-solid fa-heart"></i> and ☕</p>
+    </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
