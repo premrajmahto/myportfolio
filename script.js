@@ -8,14 +8,14 @@
 /* ============================================================
    UTILITIES
    ============================================================ */
-const qs  = (sel, ctx = document) => ctx.querySelector(sel);
+const qs = (sel, ctx = document) => ctx.querySelector(sel);
 const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
 /* ============================================================
    1. THEME TOGGLE (dark / light)
    ============================================================ */
 const themeBtn = qs('#theme-button');
-const body     = document.body;
+const body = document.body;
 
 // Read saved preference, default to dark
 const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -58,9 +58,9 @@ window.addEventListener('scroll', () => {
 function updateActiveLink() {
     const scrollY = window.scrollY + 120;
     qsa('section[id]').forEach(sec => {
-        const top    = sec.offsetTop;
+        const top = sec.offsetTop;
         const height = sec.offsetHeight;
-        const link   = qs(`.nav-link[href="#${sec.id}"]`);
+        const link = qs(`.nav-link[href="#${sec.id}"]`);
         if (link) {
             link.classList.toggle('active', scrollY >= top && scrollY < top + height);
         }
@@ -71,7 +71,7 @@ function updateActiveLink() {
    3. HAMBURGER MOBILE MENU
    ============================================================ */
 const hamburger = qs('#nav-toggle');
-const navList   = qs('#nav-menu');
+const navList = qs('#nav-menu');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
@@ -92,7 +92,7 @@ qsa('.nav-link').forEach(link => {
    4. TYPING ANIMATION
    ============================================================ */
 const typingEl = qs('.typing-text');
-const words    = ['Full Stack Developer', 'UI/UX Designer', 'Digital Marketer', 'Problem Solver'];
+const words = ['Full Stack Developer', 'Performance Marketer', 'Meta Ads Specialist', 'Problem Solver'];
 let wIdx = 0, cIdx = 0, deleting = false;
 
 function typeLoop() {
@@ -123,8 +123,8 @@ typeLoop();
 /* ============================================================
    5. SKILL BARS – animate on scroll
    ============================================================ */
-const skillFills   = qsa('.skill-fill');
-let   barsAnimated = false;
+const skillFills = qsa('.skill-fill');
+let barsAnimated = false;
 
 function animateBars() {
     if (barsAnimated) return;
@@ -145,7 +145,7 @@ animateBars(); // run once in case already in view
 /* ============================================================
    6. PROJECT FILTER
    ============================================================ */
-const filterBtns  = qsa('.filter-btn');
+const filterBtns = qsa('.filter-btn');
 const projectGrid = qs('#projects-grid');
 
 filterBtns.forEach(btn => {
@@ -188,8 +188,8 @@ const contactForm = qs('#contact-form');
 
 if (contactForm) {
     const fields = {
-        name:    { el: qs('#name'),    err: qs('#name-error'),    validate: v => v.trim().length >= 2 ? '' : 'Please enter your full name.' },
-        email:   { el: qs('#email'),   err: qs('#email-error'),   validate: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'Please enter a valid email address.' },
+        name: { el: qs('#name'), err: qs('#name-error'), validate: v => v.trim().length >= 2 ? '' : 'Please enter your full name.' },
+        email: { el: qs('#email'), err: qs('#email-error'), validate: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'Please enter a valid email address.' },
         message: { el: qs('#message'), err: qs('#message-error'), validate: v => v.trim().length >= 10 ? '' : 'Message must be at least 10 characters.' },
     };
 
@@ -228,7 +228,7 @@ if (contactForm) {
 
         fetch("https://formsubmit.co/ajax/ceoofmylife1210@gmail.com", {
             method: "POST",
-            headers: { 
+            headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
@@ -239,24 +239,24 @@ if (contactForm) {
                 message: qs('#message').value
             })
         })
-        .then(response => response.json())
-        .then(data => {
-            contactForm.reset();
-            Object.values(fields).forEach(({ el, err }) => {
-                if (el) { el.classList.remove('error-field'); err.textContent = ''; }
-            });
-            const successMsg = qs('#success-msg');
-            successMsg.style.display = 'flex';
-            submitBtn.innerHTML = 'Send Message <i class="fa-regular fa-paper-plane"></i>';
-            submitBtn.disabled = false;
+            .then(response => response.json())
+            .then(data => {
+                contactForm.reset();
+                Object.values(fields).forEach(({ el, err }) => {
+                    if (el) { el.classList.remove('error-field'); err.textContent = ''; }
+                });
+                const successMsg = qs('#success-msg');
+                successMsg.style.display = 'flex';
+                submitBtn.innerHTML = 'Send Message <i class="fa-regular fa-paper-plane"></i>';
+                submitBtn.disabled = false;
 
-            setTimeout(() => { successMsg.style.display = 'none'; }, 6000);
-        })
-        .catch(error => {
-            console.log(error);
-            submitBtn.innerHTML = 'Error - Try Again';
-            submitBtn.disabled = false;
-        });
+                setTimeout(() => { successMsg.style.display = 'none'; }, 6000);
+            })
+            .catch(error => {
+                console.log(error);
+                submitBtn.innerHTML = 'Error - Try Again';
+                submitBtn.disabled = false;
+            });
     });
 }
 
@@ -280,7 +280,7 @@ if (backToTop) {
    ============================================================ */
 AOS.init({
     duration: 800,
-    easing:   'ease-out-quart',
-    once:     true,
-    offset:   80,
+    easing: 'ease-out-quart',
+    once: true,
+    offset: 80,
 });
